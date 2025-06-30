@@ -18,10 +18,10 @@
   --font-family-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --font-family-mono: 'Courier New', monospace;
   --font-size-button: 14px;
-  --font-size-base: 16px;
+  --font-size-base: 15px;
   --font-size-h1: 36px;
   --font-size-h2: 20px;
-  --font-size-p: 18px;
+  --font-size-p: 15px;
   
   --section-margin: 0 30px;
   --table-padding: 12px;
@@ -79,6 +79,7 @@ ul {
   line-height: 2;
   font-size: var(--font-size-base);
   margin: 0 0 var(--list-spacing);
+  flex: 1;
 }
 
 img {
@@ -134,6 +135,25 @@ a {
 
 a:hover {
   color: var(--highlight-hover);
+}
+
+.hobby-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.hobby-image {
+  flex: 1;
+  margin-bottom: 40px;
+  border: 1px solid var(--primary-border-color);
+  border-radius: 5px;
+  height: 150px;
+  object-fit: cover;
+  object-position: bottom;
+  overflow: hidden;
 }
 
 button {
@@ -346,5 +366,9 @@ button:hover {
     height: auto;
     max-height: 450px;
     min-height: 450px;
+  }
+
+  .hobby-container {
+    margin-right: 20px;
   }
 }
