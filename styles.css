@@ -193,6 +193,10 @@ button:hover {
   justify-content: center;
 }
 
+.modal.show {
+  display: flex;
+}
+
 .modal-content {
   background-color: var(--secondary-background-color);
   padding: 30px;
@@ -351,11 +355,7 @@ button:hover {
     flex-direction: column;
   }
 
-  .profile-section {
-    width: calc(100% - 40px);
-    max-width: 100%;
-  }
-
+  .profile-section,
   .terminal-section {
     width: calc(100% - 60px);
     max-width: 100%;
@@ -367,8 +367,24 @@ button:hover {
     max-height: 450px;
     min-height: 450px;
   }
+}
+
+@media (max-width: 783px) {
+  body {
+    flex-direction: column;
+  }
 
   .hobby-container {
-    margin-right: 20px;
+    flex-direction: column;
+  }
+
+  ul {
+    flex: unset;
+  }
+
+  .hobby-image {
+    flex: usnet;
+    width: 100%;
+    height: auto;
   }
 }

@@ -1,9 +1,9 @@
 function openModal() {
-  document.getElementById("myModal").style.display = "flex";
+  document.getElementById("myModal").classList.add("show");
 }
 
 function closeModal() {
-  document.getElementById("myModal").style.display = "none";
+  document.getElementById("myModal").classList.remove("show");
 }
 
 function capitalize(text) {
