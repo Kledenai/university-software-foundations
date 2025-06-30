@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fundamentos - Bruno Rocha</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <section class="profile-section">
+    <h1>Bruno Rocha</h1>
+    <p>
+      Meu nome é Bruno Rocha, tenho 25 anos e moro em Guarujá - SP. Sou engenheiro de software, apaixonado por arte, matemática, filosofia e criações que misturam lógica e estética. Curioso incansável e criador de ideias.
+    </p>
+    <a href="https://www.theverge.com" target="_blank">Acesse um site de tecnologia que gosto</a>
+    <ul>
+      <li>Tocar guitarra</li>
+      <li>Desenvolver softwares</li>
+      <li>Criar origamis complexos</li>
+    </ul>
+    <table>
+      <tr>
+        <th>País</th>
+        <th>Imagem</th>
+      </tr>
+      <tr>
+        <td>Estados Unidos</td>
+        <td><img class="country-flag" src="https://flagcdn.com/w320/us.png" alt="Estados Unidos da America" /></td>
+      </tr>
+      <tr>
+        <td>Canadá</td>
+        <td><img class="country-flag" src="https://flagcdn.com/w320/ca.png" alt="Canadá" /></td>
+      </tr>
+      <tr>
+        <td>Argentina</td>
+        <td><img class="country-flag" src="https://flagcdn.com/w320/ar.png" alt="Argentina" /></td>
+      </tr>
+    </table>
+    <button onclick="openModal()">Abrir Modal</button>
+  </section>
+  <section class="terminal-section">
+    <div class="terminal" onclick="focusInput()">
+      <div id="terminal-output" class="terminal-output"></div>
+      <div class="terminal-input-line">
+        <span class="prompt">$</span>
+        <div class="input-wrapper">
+          <div id="suggestion"></div>
+          <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <p>Essa é uma mensagem dentro do modal!</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

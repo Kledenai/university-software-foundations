@@ -1,0 +1,249 @@
+:root {
+  --primary-background-color: #09090b;
+  --primary-border-color: #27272a;
+  --primary-text-color: #a1a1aa;
+  --primary-color: #09090b;
+  --font-size-base: 16px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--primary-background-color);
+  flex-direction: row;
+  color: #ffffff;
+  display: flex;
+  margin: 0;
+}
+
+section {
+  margin: 0 30px;
+}
+
+h1 {
+  text-align: left;
+  color: #ffffff;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  text-align: justify;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 40px;
+  line-height: 2;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+img {
+  width: 180px;
+  border-radius: 12px;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 90%;
+  border-collapse: collapse;
+  border-color: var(--primary-border-color);
+  background-color: #09090b;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  border: 1px solid var(--primary-border-color);
+  padding: 12px;
+  font-size: 16px;
+}
+
+th {
+  background-color: #09090b;
+  color: #a1a1aa;
+  text-align: left;
+  font-weight: 400;
+}
+
+td img {
+  width: 50px;
+  border-radius: 4px;
+}
+
+.profile-section {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.terminal-section {
+  display: flex;
+  flex: 1;
+}
+
+a {
+  display: block;
+  text-align: left;
+  color: #166fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #58a6ff;
+}
+
+button {
+  display: block;
+  margin: 0 auto 30px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.03);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+  backdrop-filter: blur(3px);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 24px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close:hover {
+  color: #e11d48;
+}
+
+.terminal {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: 'Courier New', monospace;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  margin: 45px 0px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--primary-border-color);
+  overflow-y: auto;
+  height: calc(100vh - 140px);
+}
+
+.terminal-output {
+  white-space: pre-wrap;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.terminal-input-line {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.input-wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+}
+
+#terminal-input {
+  background: transparent;
+  border: none;
+  color: #c9d1d9;
+  outline: none;
+  font-family: inherit;
+  font-size: 1em;
+  flex: 1;
+  z-index: 2;
+}
+
+#suggestion {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #6e7681;
+  z-index: 1;
+  pointer-events: none;
+  font-family: inherit;
+  font-size: 1em;
+  white-space: pre;
+  user-select: none;
+  opacity: 0.5;
+}
+
+.prompt {
+  margin-right: 8px;
+  color: #58a6ff;
+}
+
+.terminal strong {
+  color: #58a6ff;
+}
+
+.terminal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.terminal::-webkit-scrollbar-track {
+  background: #0d1117; /* mesma cor do terminal */
+  border-radius: 8px;
+}
+
+.terminal::-webkit-scrollbar-thumb {
+  background: #ffffff; /* branco */
+  border-radius: 8px;
+}
+
+.terminal::-webkit-scrollbar-thumb:hover {
+  background: #cccccc; /* opcional para hover */
+}
