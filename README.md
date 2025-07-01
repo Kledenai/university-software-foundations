@@ -2,6 +2,8 @@
 
 Este é um projeto desenvolvido por **Bruno Rocha (Kledenai)** para a disciplina **Fundamentos de Desenvolvimento de Software**, do curso de **Bacharelado em Sistemas de Informação** na **UNINTER**.
 
+Acesse o projeto: [university-software-foundations](https://kledenai.github.io/university-software-foundations/)
+
 ---
 
 ## Objetivo
